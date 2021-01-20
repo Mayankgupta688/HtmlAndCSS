@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>
+            <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Animal</h6> <div id="div1" ondragover="allowDrop(event)" ondrop="drop(event)" style="border: 1px solid grey; height:250px; width:250px; display:inline-block"></div></div>
+            <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Human</h6>  <div id="div2" ondragover="allowDrop(event)" ondrop="drop(event)" style="border: 1px solid grey; height:250px; width:250px; display:inline-block"></div></div>
+            <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Fruit</h6>  <div id="div3" ondragover="allowDrop(event)" ondrop="drop(event)" style="border: 1px solid grey; height:250px; width:250px; display:inline-block"></div></div>
+        </div>
+
+        <div>
+            <img id="image1" ondragstart="drag(event)" draggable="true" style="width: 250px; height:250" src="https://cdn.britannica.com/w:1100/80/140480-131-28E57753/Dromedary-camels.jpg" />
+            <img id="image2" ondragstart="drag(event)" draggable="true" style="width: 250px; height:250" src="https://www.accenture.com/t20200622T032553Z__w__/cz-en/_acnmedia/Accenture/Redesign-Assets/DotCom/Images/Global/General/54/Accenture-Jim-Wilson-724x543.png" />
+            <img id="image3" ondragstart="drag(event)" draggable="true" style="width: 250px; height:250" src="https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature_thumb.jpg?sfvrsn=7abe71fe_4" />
+        </div>
+
+        <script>
+            function drag(event) {
+                event.dataTransfer.setData("conponent_id", event.target.id);
+            }
+
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                var data = event.dataTransfer.getData("conponent_id");
+                event.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

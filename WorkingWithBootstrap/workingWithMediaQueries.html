@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Techno Funnel Employee List</title>
-        <link rel="stylesheet" href="./css/style.css" />
-    </head>
     <body>
-        <h1 id="page_title">Employee List for TechnoFunnel</h1>
-        <h1 id="salutation">Welcome to the Training...</h1>
 
-        <input type="button" value="Click to Hide Images" onclick="hideImage()" /><br/><br/>
-        <input type="button" value="Click to Hide Employees" onclick="hideEmployee()" /><br/><br/>
-        <input type="button" value="Click to Show Employees" onclick="showEmployee()" /><br/><br/>
+        <style>
 
+            @media only screen and (min-width: 1200px) {
+                .emp_container {
+                    display: inline-block;
+                    width: 23%;
+                    border: 1px solid red;
+                }
+            }
+
+            @media only screen and (min-width: 500px) and (max-width: 1199px) {
+                .emp_container {
+                    display: inline-block;
+                    width: 32%;
+                    border: 1px solid red;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                .emp_container {
+                    display: inline-block;
+                    width: 98%;
+                    border: 1px solid red;
+                }
+            }
+            
+
+            .emp_container img {
+                width: 100%
+            }
+
+        </style>
         <div class="emp_container">
             <img title="Mayank" alt="Photo of Mayank Gupta" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?s=612x612" />
             <div class="first_div">
@@ -20,7 +42,7 @@
             </div>
 
             <div class="second_div">
-                <span>This is profile for <b id="user_data_personal" class="user_name_data">Mayank Gupta</b>. The <b class="user_name_data">Total Experience</b> in this domain in 10+ years</span>
+                <span>This is profile for <b>Mayank Gupta</b>. The Total Experience in this domain in 10+ years</span>
             </div>
         </div>
 
@@ -36,7 +58,6 @@
             </div>
         </div>
 
-
         <div class="emp_container">
             <img title="Mayank" alt="Photo of Mayank Gupta" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?s=612x612" />
             <div class="first_div">
@@ -49,7 +70,6 @@
             </div>
         </div>
 
-
         <div class="emp_container">
             <img title="Mayank" alt="Photo of Mayank Gupta" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?s=612x612" />
             <div class="first_div">
@@ -61,7 +81,5 @@
                 <span>This is profile for <b>Mayank Gupta</b>. The Total Experience in this domain in 10+ years</span>
             </div>
         </div>
-
-        <script src="./scripts/index.js"></script>
     </body>
 </html>

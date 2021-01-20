@@ -23,11 +23,6 @@ h1 {
     margin-left: 10px;
 }
 
-h1:hover {
-    margin: 20px;
-    border: 1px solid grey;
-    padding: 20px;
-}
 
 #page_title {
     color: red;
@@ -39,5 +34,9 @@ h1:hover {
 
 [title=Mayank] {
     border: 1px solid blue;
+}
+
+[type=button] {
+    margin-left: 10px
 }
 

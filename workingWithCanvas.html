@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <video controls>
+            <source src="./WorkingWithHTML.mp4" type="video/mp4">
+            <source src="./WorkingWithHTML.mp3" type="video/mp3">
+            <source src="./WorkingWithHTML.ogg" type="video/ogg">
+            Browser Not Supported
+        </video>
+
+        <canvas id="my_canvas" width="300px" height="300px" style="border: 1px solid red;"></canvas>
+
+        <script>
+
+            var canvas = document.getElementById("my_canvas");
+            var context = canvas.getContext("2d");
+            // context.moveTo(10, 10);
+            // context.lineTo(200, 200);
+            // context.stroke();
+
+            // context.moveTo(150, 180);
+            // context.lineTo(300, 300);
+            // context.stroke()
+
+            // context.strokeText("Hello World", 120, 150);
+            // context.clearRect(0, 0, 300, 300);
+
+
+                setTimeout(function() {
+                    context.strokeText("Hello World", 120, 10);
+                }, 1000)
+                setTimeout(function() {
+                    context.clearRect(0, 0, 300, 300);
+                    context.strokeText("Hello World", 120, 20);
+                    
+                }, 2000)
+                setTimeout(function() {
+                    context.clearRect(0, 0, 300, 300);
+                    context.strokeText("Hello World", 120, 30);
+                    
+                }, 3000)
+                setTimeout(function() {
+                    context.clearRect(0, 0, 300, 300);
+                    context.strokeText("Hello World", 120, 40);
+                }, 4000)
+                setTimeout(function() {
+                    context.clearRect(0, 0, 300, 300);
+                    context.strokeText("Hello World", 120, 50);
+                }, 5000)
+                setTimeout(function() {
+                    context.clearRect(0, 0, 300, 300);
+                    context.strokeText("Hello World", 120, 60);
+                }, 1000)
+        </script>
+    </body>
+</html>
